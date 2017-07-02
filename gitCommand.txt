@@ -1,0 +1,22 @@
+提交
+1.git add把文件添加进去，把文件修改添加到暂存区；
+2.git commit提交更改，把暂存区的所有内容提交到当前分支，暂存区会清空。
+版本回退
+1.git log命令显示从最近到最远的提交日志
+2.git reset --hard HEAD^ 回退到上一个版本,HEAD表示当前版本 
+上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写成HEAD~100。
+ HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，
+使用命令git reset --hard commit_id。
+
+3.git reset --hard 版本号   重返未来
+4.git reflog用来查看命令历史，以便确定要回到未来的哪个版本。
+
+撤销修改
+1.git checkout -- filename 可以丢弃工作区的修改
+2.git reset HEAD filename可以把暂存区的修改撤销掉（unstage），
+ 重新放回工作区
+删除文件
+1.rm file 从工作区删除文件
+2.git rm file 从版本库中删除该文件，并且git commit
+2.git checkout -- file 其实是用版本库里的版本替换工作区的版本，无论工作区
+是修改还是删除，都可以“一键还原”
