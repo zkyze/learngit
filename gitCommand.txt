@@ -45,3 +45,8 @@
 5.合并某分支到当前分支：git merge <name>
 6.删除分支：git branch -d <name>
 
+文本操作
+1.vi file 进入文本操作
+2.i 进入编辑
+3.esc 退出编辑
+4. :wq! 保存并退出
