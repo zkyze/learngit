@@ -56,6 +56,10 @@
 2.git stash pop恢复工作现场并删除储藏区
 3.git stash list查看工作现场
 
+添加新功能
+1.每添加一个新功能，最好新建一个feature分支
+2.丢弃一个没有被合并过的分支，通过git branch -D <name>强行删除。
+
 文本操作
 1.vi file 进入文本操作
 2.i 进入编辑
