@@ -26,3 +26,9 @@
 2.git rm file 从版本库中删除该文件，并且git commit
 2.git checkout -- file 其实是用版本库里的版本替换工作区的版本，无论工作区
 是修改还是删除，都可以“一键还原”
+
+远程
+1.ssh-keygen -t rsa -C "youremail@example.com"创建SSH Key，主目录>>.ssh目录>>id_rsa和id_rsa.pub
+2.git remote add origin git@github.com:michaelliao/learngit.git 关联远程仓库
+3.git push -u origin master 把本地库的所有内容推送到远程库上
+4.git push origin master 修改后提交远程仓库
