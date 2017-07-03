@@ -31,9 +31,22 @@
 1.ssh-keygen -t rsa -C "youremail@example.com"创建SSH Key，主目录>>.ssh目录>>id_rsa和id_rsa.pub
 2.git remote add origin git@github.com:michaelliao/learngit.git 关联远程仓库
 3.git push -u origin master 把本地库的所有内容推送到远程库上
-4.git push origin master 修改后提交远程仓库
-5.git remote rm <name> 删除远程仓库
-6.git branch -a 查看远程分支
+
+4.git branch -a 查看远程分支
+
+远程库操作
+1.git remote 查看远程库的信息
+2.git remote -v 显示更详细的信息
+3.git remote rm <name> 删除远程仓库
+4.git push origin master 推送分支
+
+多人协作工作模式
+1.git push origin branch-name推送自己的修改；
+2.推送失败，git pull试图合并；
+3.合并有冲突，则解决冲突，并在本地提交；
+4.没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！
+5.如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，
+用命令git branch --set-upstream branch-name origin/branch-name。
 
 远程拷贝
 1.git clone git@github.com:michaelliao/gitskills.git 克隆一个本地库
